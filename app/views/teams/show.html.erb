@@ -1,0 +1,12 @@
+<div id="welcome-bar" class="bar-style bar-thin add-margin bold-bar">
+  <span>Team <%= @team.team_no %> - <%= @team.team_name %></span>
+</div>
+
+<div class="form-wrapper">
+	<h4>Assigned Projects</h4>
+	<table class="table">
+	   <%= render "shared/projects_table" %>
+	</table>
+</div>
+
+<%= link_to 'Back', teams_path %>

@@ -1,0 +1,1 @@
+{"klass":"Taps::Pull","database_url":"postgres://carlgoulding@localhost/habitat_web_postgres_development","remote_url":"http://carlgoulding:martini@localhost:5000","session_uri":"/sessions/9293747907","stream_state":{},"completed_tables":[],"table_filter":null,"remote_tables_info":{"schema_migrations":200,"users":200,"teams":200,"projects":200}}

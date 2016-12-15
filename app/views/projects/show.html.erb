@@ -1,0 +1,23 @@
+<div id="welcome-bar" class="bar-style bar-thin add-margin bold-bar">
+  <span><%= @project.reference %></span>
+</div>
+
+<%= render 'project_timeline' %>
+
+<div class="divide-line"></div>
+
+<div class="info-wrapper row">
+	<%= render 'project_info' %>
+	<%= render 'project_stack' %>
+</div>
+
+<div id="welcome-bar" class="bar-style bar-thin add-margin">
+	<% unless registered? %>
+		<%= invite_button(@project, "white-text") %>
+	<% else %>
+  	<span><%= link_to "edit customer details", edit_user_path(@project.user_id) %></span>
+  <% end %>
+</div>
+
+<div id="project-update-modal" class="modal fade"></div>
+

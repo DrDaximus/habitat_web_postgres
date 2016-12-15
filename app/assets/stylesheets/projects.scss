@@ -1,0 +1,346 @@
+// Place all the styles related to the projects controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "variables";
+
+$timeline-color: #EBEBEB;
+$title-color: #9B9B9B;
+$midgrey: #CECECE;
+$blue: #5CAED1;
+
+//-----> Projects List
+
+.projects-wrapper	{
+	margin-top: 1px;
+	margin-left: -2px;
+	margin-bottom: 0px;
+	width: 1004px;
+	.project-box {
+		border: solid 2px white;
+		display: inline-block;
+		margin-right: -3px;
+		width: 200px;
+		height: 220px;
+		.project-upper {
+			margin: 0 auto;
+			padding-top: 5px;
+			width: 193px;
+			height: 55px;
+			color: white;
+			.project-icon { 
+				padding: 5px 0 0 20px; 
+				text-align: center; 
+				font-size: 2em; 	
+			}
+			.red {color: $red; } 
+			.project-title { 
+				a {color: white;}
+				font-weight: bold;
+				font-size: 1.1em;
+				padding: 3px 0 0 18px;
+				.location { margin-top: -3px; font-weight: normal; font-size: 0.7em; }
+			}
+		}
+		.project-lower {
+			margin: 0 auto;
+			background: white;
+			width: 192px;
+			height: 138px;
+			margin-top: 0px;
+			padding: 4px;
+			color: $banners;
+			.project-items {
+				font-size: 0.8em;
+				span { color: grey; }
+			}
+		}
+		.project-footer {
+			padding-top: 4px;
+			font-size: 0.8em;
+			color: white;
+			a {color: white;}
+			text-align: center;
+		}
+	}
+}
+
+.pagination {
+	margin-top: -8px !important;
+  text-align: center;
+  padding: 0.3em;
+  cursor: default;
+  a, span, em {
+    padding: 0.2em 0.5em;
+  }
+  .disabled {
+    color: #aaaaaa;
+  	font-size: 0.8em !important;
+  }
+  .current {
+  	font-size: 0.8em !important;
+    color: $hab-light-green;
+  }
+  a {
+  	font-size: 0.8em !important;
+    color: #0063dc;
+    text-decoration: none;
+    &:hover, &:focus {
+      color: $hab-light-green;
+    }
+  }
+  .page_info {
+    color: #aaaaaa;
+  	.previous_page, .next_page {
+ 	 	}
+  	.previous_page {
+    	margin-right: 0.5em;
+  	}
+  	.next_page {
+   	 	margin-left: 0.5em;
+  	}
+	}
+}
+
+//-----> Show Job
+
+.divide-line {
+	width: 100%;
+	height: 1px;
+	background: $banners;
+	margin: 10px 0;
+}
+
+#timeline-line {
+	position: absolute;
+	z-index: -100;
+	top: 37px;
+	left: 100px;
+	height: 4px;
+	width: 550px;
+	background: $timeline-color;
+}
+
+.timeline-wrapper {
+	margin: 40px auto !important;
+	width: 900px;
+	height: 110px;
+}
+
+.end { height: 100%; }
+
+.timeline-item {
+	font-family: $second-font;
+	color: $timeline-color;
+	height: 100%;
+	text-align: center;
+}
+
+.icon { font-size: 1.8em;}
+
+.circle {
+	color: white;
+	margin: 0 auto;
+	height: 80px;
+	width: 80px;
+	border-radius: 100%;
+	border: solid 4px white;
+	background: $timeline-color;	
+	padding: 24px 0;
+}
+
+.active {
+	.circle { background: $hab-light-green; }
+	color: $title-color;
+}   
+
+//-----> User-data
+
+.info-item {
+	padding: 0px 0;
+	font-size: 1em;
+	font-family: $second-font;
+	font-weight: 500;
+	color: $banners;
+	.title { 
+		font-family: $main-font;
+		letter-spacing: 1px;
+		font-weight: 400;
+		float: left; 
+		width: 120px; 
+		color: $title-color;
+	}
+	.invite-btn { 
+		padding: 3px 10px; 
+		border-radius: 20px; 
+		background: $hab-light-green; 
+		color: white;
+		margin-top: -3px;
+		&:hover { cursor: pointer; color: $red;}
+		float: right;
+	}
+}
+#added-on { span {color: $blue; font-size: 0.8em} }
+#lastname, #email { padding-top: 2px; }
+
+//-----> STACK 
+
+.stack-box {
+	font-family: $second-font;
+	font-weight: 500;
+	font-size: 1.2em;
+	text-align: center;
+	padding-top: 13px;
+	height: 48px;
+	width: 80%;
+	margin: 0 auto;
+	margin-top: 8px;
+	background: $timeline-color;
+	border-radius: 10px;
+	color: $midgrey;
+	.title { position: absolute; padding: 3px 0 0 10px; font-size: 0.7em; color: $midgrey;}
+}
+.highlight { color: $blue; }
+
+.stack-button { background: $blue; color: white;} 
+
+.stack-button-disabled {
+	color: lightgrey;
+}
+
+.add-icon { 
+	cursor: pointer;
+	font-weight: normal;
+	padding-top: 10px;
+	color: $red;
+	font-size: 10px;
+	top: 3px;
+	position: absolute; 
+	height: 55px; 
+	width: 55px; 
+	border-radius: 15px; 
+	border: solid 2px $red;
+	
+}
+.check { border: solid 2px $hab-light-green; color: $hab-light-green;}
+
+#design-icon {
+	left: -68px;
+}
+#quoted-icon {
+	left: -130px;
+}
+#contract-icon {
+	left: -192px;
+}
+
+//-----> Enquiry Form
+
+#customer-form { margin: 0 auto; width: 687px; }
+
+#bg-logo {
+	position: absolute;
+	top: 165px;
+	left: 495px;
+	height: 73px;
+	width: 69px;
+	background-image: image-url("trans-logo.png");
+}
+
+.enquiry-heading {
+	letter-spacing: 3px;
+	text-align: center;
+	font-family: $main-font;
+	color: $banners;
+	margin-bottom: 40px;
+	margin-top: 30px;
+}
+
+#main-head {
+	font-size: 2em;
+	margin-bottom: 5px ;
+}
+
+#sub-head{
+	font-size: 0.9em;
+	margin-top: 5px;
+}
+
+.enquiry-sub-heading {
+	letter-spacing: 3px;
+	text-align: center;
+	font-family: $main-font;
+	font-size: 2em;
+	color: $banners;
+	margin: 20px 0 5px 0;
+}
+
+.form-group {
+	margin: 0 0 10px 0!important;
+}
+.form-control {
+	font-size: 0.9em !important;
+	height: 30px !important;
+	border: solid 1px $hab-light-green !important;
+	border-radius: 0 !important;
+}
+
+.input-group-addon {
+	cursor: pointer;
+	min-width: 40px;
+	color: white !important;
+	border-radius: 0 !important;
+	border: solid 1px $hab-light-green !important;
+	background: $hab-light-green !important;
+}
+
+.btn-submit-enquiry {
+	width: 100%;
+	border-radius: 0;
+	border: none;
+	height: 38px;
+	color: white;
+	letter-spacing: 2px;
+	background: $banners;
+	margin: 10px 0;
+}
+
+.form-head {
+	letter-spacing: 2px;
+	font-size: 0.8em ;
+	height: 38px;
+	background: $banners;
+	color: white;
+	padding: 12px 0 0 10px;
+	margin-bottom: 10px;
+}
+
+.enquiry-notes {
+	max-width: 100%;
+	min-width: 100%;
+	height: 100px !important;
+}
+
+//------> Modal Styling
+
+#modal-wrapper {
+	margin: 20px auto;
+	width: 80%;
+
+}
+
+//------> Project Map 
+
+.hidden {
+  display: none;
+}
+.visible {
+  display: block;
+}
+.map-btn {
+  &:hover { cursor: pointer; color: $hab-light-green;}
+}
+
+//------> Form field addon's
+
+.modal-addon { min-width: 100px !important; text-align: left !important;}

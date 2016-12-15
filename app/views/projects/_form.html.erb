@@ -1,0 +1,14 @@
+<%= bootstrap_form_for(@project) do |f| %>
+  
+  <%= f.hidden_field :user_id, value: (@user.id if current_user.customer?) %> 
+  <%= f.hidden_field :reference, :value => generate_project_reference %>
+  <%= f.hidden_field :added_by, :value => added_by_who %>
+
+  <% if current_user %> 
+    <% if current_user.admin? %>
+      <%= render 'customer_form' , f: f %>
+    <% else %>
+      <%= render 'customer_form' , f: f %>
+    <% end %>
+  <% end %>
+<% end %>

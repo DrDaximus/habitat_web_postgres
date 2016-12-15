@@ -1,0 +1,54 @@
+@import "variables";
+
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: $second-font;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+p, ol, ul, td {
+  font-family: $second-font;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+div {
+  &.field, &.actions {
+    margin-bottom: 10px;
+  }
+}
+
+.help-block {
+  color: $red !important;
+  position: absolute;
+  z-index: 100;
+  right: 20px;
+}
+
+#error_explanation {
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  background-color: $red;
+
+  h2 {
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 12px;
+  }
+
+  ul li {
+    font-size: 12px;
+    list-style: square;
+  }
+}
