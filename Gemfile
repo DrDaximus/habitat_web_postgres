@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.2.6'
+ruby '2.3.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
@@ -35,6 +35,9 @@ gem 'jquery-turbolinks'
 gem 'will_paginate', '~> 3.1.0'
 gem 'prawn'
 gem "paperclip", "~> 5.0.0"
+
+#for heroku
+gem 'rails_12factor'
 
 
 # Use ActiveModel has_secure_password
