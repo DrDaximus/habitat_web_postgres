@@ -1,10 +1,10 @@
 <div id="menu-bar" class="bar-style bar-thin">
 	<span>
 		<% if params[:controller] != 'welcome' %>
-			<%= link_to "home", root_path %>
+			<%= link_to "home", root_path %> |
 		<% end %>
-		| <%= link_to "about us", "#" %>
-		| <%= link_to "contact us", "#" %>
+		<%= link_to "about us", "#" %>
+		| <%= link_to "show room", "#" %>
 		<% if current_user %>
 			| <%= link_to "my habitat", user_path(current_user.id) %>
 		<% else %>
