@@ -1,0 +1,28 @@
+<h3>Project Portfolios</h3><br>
+
+<div class="port-wrapper">
+  <% @portfolios.each do |portfolio| %>
+  <%= link_to portfolio do %>
+    <div class="portfolio-select">
+        <div class="background-image" style="background-image: url(<%= portfolio.image1.url(:show)%>)">
+          <div class="show-portfolio">
+              <%= portfolio.title %>
+          </div>
+        </div>
+    </div>
+    <% end %>
+    <% if admin? %>
+      <div class="port-links">
+        <%= link_to 'Edit', edit_portfolio_path(portfolio) %> |
+        <%= link_to 'Delete', portfolio, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </div>
+    <% else %>
+    <br><br>
+    <% end %>
+  <% end %>
+</div>
+
+<% if admin? %>
+<br><br>
+<%= link_to 'New Portfolio', new_portfolio_path, class: "btn btn-success" %>
+<% end %>

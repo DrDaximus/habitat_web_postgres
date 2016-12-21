@@ -1,0 +1,45 @@
+<!-- PROJECTS BAR-->
+<div id="portfolio-title" class="white-head">
+  <%= @portfolio.title %> <%= link_to '| Edit Portfolio', edit_portfolio_path(@portfolio) if admin? %>
+</div>
+
+<div id="image-container">
+  <div class="image-top">
+    <div class="lg-image">
+      <div class="desc-tag">
+        <div class="logo"></div>
+        <div class="desc-text"><%= @portfolio.desc1 %></div>
+      </div>
+      <%= image_tag @portfolio.image1.url(:medium)%>
+    </div>
+    <div class="lg-image top-right">
+      <div class="desc-tag">
+        <div class="logo"></div>
+        <div class="desc-text"><%= @portfolio.desc2 %></div>
+      </div>
+      <%= image_tag @portfolio.image2.url(:medium)%>
+    </div>
+  </div>
+
+  <div class="image-bottom">
+    <div class="sm-image">
+      <div class="desc-tag small">
+        <div class="logo"></div>
+        <div class="desc-text"><%= @portfolio.desc3 %></div>
+      </div>
+      <%= image_tag @portfolio.image3.url(:medium)%></div>
+    <div class="lg-image middle">
+      <div class="desc-tag">
+        <div class="logo"></div>
+        <div class="desc-text"><%= @portfolio.desc4 %></div>
+      </div>
+      <%= image_tag @portfolio.image4.url(:medium)%>
+    </div>
+    <div class="sm-image bottom-right">
+      <div class="desc-tag small">
+        <div class="logo"></div>
+        <div class="desc-text"><%= @portfolio.desc5 %></div>
+      </div>
+      <%= image_tag @portfolio.image5.url(:medium)%></div>
+  </div>
+</div>

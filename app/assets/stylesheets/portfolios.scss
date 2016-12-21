@@ -1,0 +1,103 @@
+// Place all the styles related to the portfolios controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "variables";
+
+
+//------> Portfolio Index
+
+.port-wrapper { width: 150px;
+	a { color: white;}
+}
+.portfolio-select {
+	height: 150px;
+	width: 100%;
+	border-radius: 10px;
+	text-align: center;
+	font-family: $main-font;
+	overflow: hidden;
+	border: solid 2px white;
+	&:hover { border-color: $hab-dark-green;}
+}
+.background-image {
+	height: 150px;
+	width: 150px;
+}
+.show-portfolio{
+	padding-top: 3px;
+	position: relative;
+	height: 20%;
+	width: 100%;
+	background: rgba(90,90,90,0.9);
+}
+
+.port-links {
+	text-align: center;
+}
+
+//------> Portfolio Form
+
+.image-title {
+	color: $hab-dark-green;
+	width: 100%;
+	text-align: center;
+}
+.edit-image-container {
+	display: inline-block;
+	margin-bottom: 5px;
+	width: 100%;
+	border: solid 2px $banners;
+	border-radius: 5px;
+}
+.image { margin-top: -20px; text-align: center}
+.image-row {
+	padding: 5px;
+}
+
+
+
+//------> Portfolio Show
+
+#image-container 	{
+	height: 672px;
+	.lg-image	{
+		width: 498px;
+		float: left;
+		margin-bottom: 4px;
+	}
+	.top-right {
+			margin-left: 4px;
+		}
+	.sm-image	{
+		width: 248px;
+		float: left;
+	}
+	.middle {
+		margin: 0 3px;
+	}
+}
+.desc-tag {
+	position: absolute;
+	margin-top: 275px;
+	width: 498px;
+	height: 40px;
+	background: rgba(255,255,255, 0.7);
+}
+.small {
+	width: 248px;
+}
+.desc-text {
+	color: $banners;
+	font-weight: bold;
+	padding: 10px 0 0 50px;
+	font-size: 1.1rem;
+}
+.logo {
+	position: absolute;
+	margin-top: -15px;
+	margin-left: 5px;
+	width: 35px;
+	height: 37px;
+	background-image: url('/assets/mini-logo.png')
+}

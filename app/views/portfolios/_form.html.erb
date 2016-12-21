@@ -1,0 +1,47 @@
+<%= bootstrap_form_for(@portfolio) do |f| %>
+  <% if @portfolio.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@portfolio.errors.count, "error") %> prohibited this portfolio from being saved:</h2>
+
+      <ul>
+      <% @portfolio.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <h5><%= f.label :title, value: "Portfolio Title" %></h5>
+    <%= f.text_field :title, placeholder: "Enter a name for this portfolio", hide_label: true %>
+  </div>
+
+  <% (1..5).each do |i| %>
+
+    <% it = i.to_s %>
+    <% image = "image" + it %>
+    <% desc = "desc" + it %>
+
+    
+    <div class="edit-image-container">
+      <h5 class="image-title"> Portfolio Image <%= it %> </h5>
+      <div class="row image-row">
+        <div class="col-md-8 field">
+          <%= f.label desc, value: "Image Description"%><br>
+          <%= f.text_field desc, placeholder: "Enter a description for this image", hide_label: true %>
+          <%= f.file_field image, hide_label: true %>
+        </div> 
+        <div class="col-md-4 image">
+          <b>Image</b>
+          <div class="image-box">
+            <%= image_tag @portfolio.send("image" + it).url(:thumb) if @portfolio.send("image" + it).file? %>
+          </div>   
+        </div>
+      </div>
+    </div>
+  <% end %>
+  
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
