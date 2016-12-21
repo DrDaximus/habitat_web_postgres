@@ -4,7 +4,6 @@ class Project < ActiveRecord::Base
 	belongs_to :team # Only if customer registers their account.  
 
 	has_attached_file :contract
-
 	validates_attachment :contract, content_type: { content_type: 'application/pdf' }
 
 	# If no user logged in, check if that email already exists in the customer database.
