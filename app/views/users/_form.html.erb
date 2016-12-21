@@ -11,7 +11,7 @@
     </div>
   <% end %>
 
-  <% if current_user && current_user.admin? && @user.new_record?  %>
+  <% if admin? && @user.new_record?  %>
     <div class="form-group">
       <div class="input-group">
         <div class="input-group-addon modal-addon">

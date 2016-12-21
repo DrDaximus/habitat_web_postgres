@@ -4,7 +4,7 @@
 			<%= link_to "home", root_path %> |
 		<% end %>
 		<%= link_to "about us", "#" %>
-		| <%= link_to "show room", "#" %>
+		| <%= link_to "portfolio", portfolios_path %>
 		<% if current_user %>
 			| <%= link_to "my habitat", user_path(current_user.id) %>
 		<% else %>

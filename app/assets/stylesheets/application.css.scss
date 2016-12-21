@@ -68,6 +68,16 @@ section {
 	margin: 0 auto;
 }
 
+.white-head {
+	margin: 15px auto;
+	background: white;
+	text-align: center;
+	color: $banners;
+	font-family: $main-font;
+	letter-spacing: 3px;
+	font-weight: 100;	
+}
+
 .bar-style {
 	margin: 0 auto;
 	background: $banners;
