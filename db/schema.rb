@@ -48,25 +48,25 @@ ActiveRecord::Schema.define(version: 20161221142802) do
   end
 
   create_table "projects", force: :cascade do |t|
-    t.text     "reference"
-    t.text     "added_by",              default: "Unknown"
-    t.text     "job_type"
+    t.string   "reference"
+    t.string   "added_by",              default: "Unknown"
+    t.string   "job_type"
     t.integer  "stage",                 default: 1
     t.decimal  "quote"
     t.date     "start_date"
     t.integer  "team_id"
     t.boolean  "pif",                   default: false
     t.boolean  "contract_present",      default: false
-    t.text     "handled"
+    t.string   "handled"
     t.boolean  "q_sent",                default: false
     t.datetime "created_at",                                null: false
     t.datetime "updated_at",                                null: false
-    t.text     "email"
+    t.string   "email"
     t.integer  "user_id"
-    t.text     "first_name"
-    t.text     "last_name"
-    t.text     "telephone"
-    t.text     "post_code"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "telephone"
+    t.string   "post_code"
     t.integer  "budget"
     t.integer  "when"
     t.text     "notes"
@@ -76,14 +76,14 @@ ActiveRecord::Schema.define(version: 20161221142802) do
     t.float    "latitude"
     t.float    "longitude"
     t.datetime "contract_date"
-    t.text     "contract_file_name"
-    t.text     "contract_content_type"
+    t.string   "contract_file_name"
+    t.string   "contract_content_type"
     t.integer  "contract_file_size"
     t.datetime "contract_updated_at"
   end
 
   create_table "teams", force: :cascade do |t|
-    t.text     "team_name"
+    t.string   "team_name"
     t.integer  "team_no"
     t.integer  "user_id"
     t.datetime "created_at", null: false
@@ -91,11 +91,11 @@ ActiveRecord::Schema.define(version: 20161221142802) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.text     "name"
-    t.text     "lastname"
-    t.text     "email"
-    t.text     "password_digest"
-    t.text     "reference"
+    t.string   "name"
+    t.string   "lastname"
+    t.string   "email"
+    t.string   "password_digest"
+    t.string   "reference"
     t.integer  "role"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
